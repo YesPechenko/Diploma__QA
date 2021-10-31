@@ -4,8 +4,8 @@
 #### Для работы с MySQL
 
 1. Запуск контейнера MySQL:
-    ```docker-compose up -d
-    
+    ```
+    docker-compose up -d
     ```
 1. Запуск SUT:
     ```
