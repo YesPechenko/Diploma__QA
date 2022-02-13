@@ -43,8 +43,6 @@ public class PurchaseViaCardTest {
         assertEquals(SqlDataHelper.getStatusLastTransaction(), "APPROVED");
     }
 
-
-
     public static Stream<DataHelper.CardInfo> getValidCardData() {
         return Stream.of(
                 new DataHelper.CardInfo("06", DataHelper.getYearCard(1), "IVAN IVANOV", "691"),

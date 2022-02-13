@@ -15,12 +15,6 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class FormsPurchase {
 
-//    private SelenideElement numberCard = $$("input.input__control").get(0);
-//    private SelenideElement monthCard = $$("input.input__control").get(1);
-//    private SelenideElement yearCard = $$("input.input__control").get(2);
-//    private SelenideElement ownerCard = $$("input.input__control").get(3);
-//    private SelenideElement cvcCard = $$("input.input__control").get(4);
-
     private static SelenideElement cardNumber = $(byText("Номер карты")).parent().$(".input__control");
     private static SelenideElement cardMonth = $(byText("Месяц")).parent().$(".input__control");
     private static SelenideElement cardYear = $(byText("Год")).parent().$(".input__control");
