@@ -5,6 +5,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import lombok.val;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -30,6 +31,7 @@ public class CreditPurchaseTest {
         }
 
         @Test
+        @DisplayName("Должен быть успех покупки кредита с генерацией данных")
         void shouldSuccessCreditPurchaseWithGenerateData() {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
             val byFormPage = FormPage.clickOnCredit();
@@ -49,6 +51,7 @@ public class CreditPurchaseTest {
         }
 
         @ParameterizedTest
+        @DisplayName("Валидные данные")
         @MethodSource("getValidCardData")
         void shouldSuccessCreditPurchaseWithData(DataHelper.CardInfo cardInfo) {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
@@ -60,6 +63,7 @@ public class CreditPurchaseTest {
         }
 
         @Test
+        @DisplayName("если ошибка кредитной покупки с недействительным номером, месяцем карты")
         void shouldErrorCreditPurchaseWithNotValidNumberCard() {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
             val byFormPage = FormPage.clickOnCredit();
@@ -77,6 +81,7 @@ public class CreditPurchaseTest {
         }
 
         @ParameterizedTest
+        @DisplayName("Должна быть ошибка кредитной покупки с ошибкой карты валидности данных")
         @MethodSource("getNotValidCardDataForValidityErrorCardData")
         void shouldErrorCreditPurchaseWithDataValidityCardError(DataHelper.CardInfo cardInfo) {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
@@ -87,6 +92,7 @@ public class CreditPurchaseTest {
         }
 
        @Test
+       @DisplayName("должна быть ошибка кредитной покупки с ошибкой карты года действия данных, полем владельцем")
        void shouldErrorCreditPurchaseWithDataValidityYear() {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
             val byFormPage = FormPage.clickOnCredit();
@@ -103,6 +109,7 @@ public class CreditPurchaseTest {
         }
 
         @ParameterizedTest
+        @DisplayName("должна быть ошибка кредитной покупки с ошибкой карты владельца данных")
         @MethodSource("getNotValidCardDataForOwnerCardError")
         void shouldErrorCreditPurchaseWithDataOwnerCardError(DataHelper.CardInfo cardInfo) {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
@@ -113,6 +120,7 @@ public class CreditPurchaseTest {
         }
 
         @Test
+        @DisplayName("должен быть правильный кредитный идентификатор в базе данных")
         void shouldRightCreditIdInDb() {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
             val byFormPage = FormPage.clickOnCredit();
