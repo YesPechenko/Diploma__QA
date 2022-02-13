@@ -51,7 +51,7 @@ public class CreditPurchaseTest {
         }
 
         @ParameterizedTest
-        @DisplayName("Валидные данные")
+//        @DisplayName("Валидные данные")
         @MethodSource("getValidCardData")
         void shouldSuccessCreditPurchaseWithData(DataHelper.CardInfo cardInfo) {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
@@ -81,7 +81,7 @@ public class CreditPurchaseTest {
         }
 
         @ParameterizedTest
-        @DisplayName("Должна быть ошибка кредитной покупки с ошибкой карты валидности данных")
+//        @DisplayName("Должна быть ошибка кредитной покупки с ошибкой карты валидности данных")
         @MethodSource("getNotValidCardDataForValidityErrorCardData")
         void shouldErrorCreditPurchaseWithDataValidityCardError(DataHelper.CardInfo cardInfo) {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
@@ -109,7 +109,7 @@ public class CreditPurchaseTest {
         }
 
         @ParameterizedTest
-        @DisplayName("должна быть ошибка кредитной покупки с ошибкой карты владельца данных")
+//        @DisplayName("должна быть ошибка кредитной покупки с ошибкой карты владельца данных")
         @MethodSource("getNotValidCardDataForOwnerCardError")
         void shouldErrorCreditPurchaseWithDataOwnerCardError(DataHelper.CardInfo cardInfo) {
             val FormPage = open(System.getProperty("sut.url"), FormPage.class);
