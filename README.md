@@ -37,3 +37,10 @@
    ```
    gradlew allureReport
    ```
+   ## Документы:
+   [План тестирования приложения в веб-сервисе «Путешествие дня»](https://github.com/YesPechenko/Diploma__QA/blob/master/Plan.md)
+   
+   [Отчётные документы по итогам тестирования](https://github.com/YesPechenko/Diploma__QA/blob/master/Report.md)
+   
+   [Отчётные документы по итогам автоматизации](https://github.com/YesPechenko/Diploma__QA/blob/master/Summary.md)
+   
