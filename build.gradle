@@ -39,8 +39,8 @@ test {
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 
 
-    systemProperty 'url', System.getProperty('url', 'jdbc:mysql://192.168.99.100:3306/app')
-    systemProperty 'user', System.getProperty('user', 'app')
-    systemProperty 'password', System.getProperty('password', 'pass')
-    systemProperty 'host', System.getProperty('host', 'http://localhost:8080')
+    systemProperty 'db.url', System.getProperty('db.url', 'jdbc:mysql://192.168.99.100:3306/app')
+    systemProperty 'db.user', System.getProperty('db.user', 'app')
+    systemProperty 'db.password', System.getProperty('db.password', 'pass')
+    systemProperty 'db.host', System.getProperty('db.host', 'http://localhost:8080')
 }

@@ -22,9 +22,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PurchaseViaCardTest {
 
+
+
     @BeforeAll
     static void setUpAll() {
-        SelenideLogger.addListener("allure", new AllureSelenide().screenshots(true));
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
     @AfterAll

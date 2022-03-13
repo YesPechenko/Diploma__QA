@@ -21,14 +21,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CreditPurchaseTest {
 
     @BeforeAll
-        static void setUpAll() {
-            SelenideLogger.addListener("allure", new AllureSelenide().screenshots(true));
-        }
+    static void setUpAll() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
 
-        @AfterAll
-        static void tearDownAll() {
-            SelenideLogger.removeListener("allure");
-        }
+    @AfterAll
+    static void tearDownAll() {
+        SelenideLogger.removeListener("allure");
+    }
 
         @Test
         @DisplayName("Должен быть успех покупки кредита с генерацией данных")
