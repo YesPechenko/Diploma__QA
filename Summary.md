@@ -6,7 +6,7 @@
 
 ### Причины, по которым что-то не было сделано
  Все заявленное было сделано
- ![Allure broken](![image](https://user-images.githubusercontent.com/22775215/161434930-c3470e37-df2b-4440-9d1c-50cc83a42832.png)
+ (![image](https://user-images.githubusercontent.com/22775215/161434930-c3470e37-df2b-4440-9d1c-50cc83a42832.png)
  
 ### Сработавшие риски
  - Сложность в настройке и написание тестовой среды.
